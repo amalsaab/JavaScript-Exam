@@ -12,41 +12,41 @@ signUp_btn.addEventListener("click", () => {
 login_btn.addEventListener("click", () => {
     window.location.href = "login.html"
 })
-// signUp.addEventListener("click", () => {
-//     let name1 = document.getElementById("name").value
-//     let email = document.getElementById("email").value
-//     let password = document.getElementById("password").value
-//     // console.log(name);
-//     const nameRegex = /^[a-zA-Z]{5,20}$/
-//     const emailRegex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/ 
-//     const passwordRegex = /^[A-Za-z]\w{7,14}$/
+signUp.addEventListener("click", () => {
+    let name1 = document.getElementById("name").value
+    let email = document.getElementById("email").value
+    let password = document.getElementById("password").value
+    // console.log(name);
+    const nameRegex = /^[a-zA-Z]{5,20}$/
+    const emailRegex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/ 
+    const passwordRegex = /^[A-Za-z]\w{7,14}$/
 
-//     if(name1.length === 0 || email.length === 0 || password.length === 0){
-//         // console.log("dddd");
-//         errorMassege("the input is empty")
-//     }else if(!nameRegex.test(name1)){
-//         errorMassege("the name is not correct")
-//     }else if(!emailRegex.test(email)){
-//         errorMassege("the email is not correct")
-//     }else if(!passwordRegex.test(password)){
-//         errorMassege("the password is not correct")
-//     }else{
-//         fetch('https://655309665449cfda0f2e03c5.mockapi.io/users', {
-//             method: 'POST',
-//             body: JSON.stringify({
-//                 name: name1,
-//                 email: email,
-//                 password: password,
-//             }),
-//             headers: {
-//                 'Content-type': 'application/json; charset=UTF-8',
-//             },
-//             })
-//             .then((response) => response.json())
-//             .then((data) => window.location.href = "login.html");
-//     }
+    if(name1.length === 0 || email.length === 0 || password.length === 0){
+        // console.log("dddd");
+        errorMassege("the input is empty")
+    }else if(!nameRegex.test(name1)){
+        errorMassege("the name is not correct")
+    }else if(!emailRegex.test(email)){
+        errorMassege("the email is not correct")
+    }else if(!passwordRegex.test(password)){
+        errorMassege("the password is not correct")
+    }else{
+        fetch('https://655309665449cfda0f2e03c5.mockapi.io/users', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: name1,
+                email: email,
+                password: password,
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+            })
+            .then((response) => response.json())
+            .then((data) => window.location.href = "login.html");
+    }
     
-// })
+})
 login.addEventListener("click", () => { 
     let email = document.getElementById("Lemail").value
     let password = document.getElementById("Lpassword").value
