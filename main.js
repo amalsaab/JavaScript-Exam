@@ -2,7 +2,7 @@ function prayerGet(){
     let date_1 = new Date()
     let currentDate = new Date().toJSON().slice(0, 10).split("-");
     console.log(currentDate);
-    fetch(`http://api.aladhan.com/v1/calendarByAddress/${currentDate[0]}/${currentDate[1]}?address=Riyadh, Saudi Arabia&method=2`)
+    fetch(`https://api.aladhan.com/v1/calendarByAddress/${currentDate[0]}/${currentDate[1]}?address=Riyadh, Saudi Arabia&method=2`)
         .then((response) => response.json())
         .then((data) => {console.log(data)
             // data.data.currentDate[2]
